@@ -4,56 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS Calculator</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f4f4f4;
-        }
-        .calculator {
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            width: 300px;
-        }
-        .calculator h1 {
-            margin-bottom: 20px;
-            font-size: 24px;
-        }
-        .calculator label {
-            display: block;
-            margin: 10px 0 5px;
-            font-weight: bold;
-        }
-        .calculator input, .calculator select, .calculator button {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-        .calculator button {
-            background-color: #8b4513;
-            color: white;
-            cursor: pointer;
-            border: none;
-        }
-        .calculator button:hover {
-            background-color: #a0522d;
-        }
-        .result {
-            margin-top: 10px;
-            font-size: 18px;
-            font-weight: bold;
-        }
-    </style>
+    <link rel="stylesheet" href="113306042_HW8.css">
 </head>
 <body>
     <div class="calculator">
@@ -77,43 +28,6 @@
         <div class="result" id="result">Result = </div>
     </div>
 
-    <script>
-        document.getElementById('calculate').addEventListener('click', function() {
-            const number1 = parseFloat(document.getElementById('number1').value);
-            const number2 = parseFloat(document.getElementById('number2').value);
-            const operator = document.getElementById('operator').value;
-            const resultElement = document.getElementById('result');
-
-            if (isNaN(number1) || isNaN(number2)) {
-                resultElement.textContent = 'Result = Invalid input';
-                return;
-            }
-
-            let result;
-            switch (operator) {
-                case '+':
-                    result = number1 + number2;
-                    break;
-                case '-':
-                    result = number1 - number2;
-                    break;
-                case '*':
-                    result = number1 * number2;
-                    break;
-                case '/':
-                    if (number2 === 0) {
-                        resultElement.textContent = 'Result = Cannot divide by zero';
-                        return;
-                    }
-                    result = number1 / number2;
-                    break;
-                default:
-                    resultElement.textContent = 'Result = Invalid operator';
-                    return;
-            }
-
-            resultElement.textContent = `Result = ${result.toFixed(2)}`;
-        });
-    </script>
+    <script src="113306042_HW8.js"></script>
 </body>
 </html>
